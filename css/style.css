@@ -590,3 +590,69 @@ img {
     font-size: 11px;
     color: #999999;
 }
+
+
+/* ==========================
+   レスポンシブ対応（追記分・768px以下のみ上書き）
+========================== */
+@media (max-width: 768px) {
+    /* スライドショー：画像1枚が見えるサイズ */
+    .hero-slide {
+        width: 100%;
+    }
+
+    /* 新着作品：横2つ */
+    .arrival-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .arrival-card::after {
+        display: none;
+    }
+
+    /* ジャンル・タグから探す：横2つ */
+    .genre-inner {
+        padding: 40px 16px;
+    }
+    .genre-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .genre-item {
+        width: 100%;
+    }
+
+    /* コミック最新刊販売中：横3つ */
+    .new-release {
+        padding: 40px 16px;
+    }
+    .card-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* レーベルから探す：横4つ */
+    .label-search-inner {
+        padding: 40px 16px;
+    }
+    .card-label {
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* バナー一覧：縦に1つずつ */
+    .banner-list {
+        padding: 40px 16px;
+    }
+    .banner-grid {
+        grid-template-columns: 1fr;
+    }
+
+    /* ここから下は自由に対応 */
+    .header-main {
+        padding: 12px 16px;
+    }
+    .nav-list {
+        gap: 24px;
+    }
+    .app-banner {
+        flex-wrap: wrap;
+        padding: 16px;
+    }
+}
